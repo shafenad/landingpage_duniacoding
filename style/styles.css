@@ -1,0 +1,482 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: #21007c; 
+    padding: 20px 0;
+  }
+
+  footer{
+  padding: 10px;
+  color: white;
+  background-color: #21007c;
+  text-align: center;
+  font-weight: regular;
+  display: flex;
+  justify-content: center; /* Mengatur agar elemen berada di tengah secara horizontal */
+  align-items: center; /* Mengatur agar elemen berada di tengah secara vertikal */
+}
+
+footer a {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: white; /* Warna teks tautan */
+  text-decoration: none; /* Menghapus garis bawah default */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Menambahkan garis bawah saat tautan dihover */
+}
+  
+  .icon {
+    margin: 20px; /* Jarak antara icon dan teks */
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 10px auto;
+    background: transparent; /* Hapus latar belakang navbar */
+  }
+
+  
+  .logo img {
+    width: 160x; /* Adjust as needed */
+  }
+  
+  .logo {
+    color: #ffffff; /* Mengubah warna teks logo menjadi putih */
+  }
+  
+
+  .navbar-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #ffffff; /* Warna teks yang lebih terang */
+    position: relative; /* Menentukan posisi relatif untuk link */
+  }
+
+  .navbar-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px; /* Ketebalan garis bawah */
+    background-color: #ffffff; /* Warna garis bawah */
+    position: absolute; /* Menentukan posisi absolut untuk garis */
+    bottom: -10px; /* Mengatur posisi garis 2px dari bawah */
+    left: 0; /* Mengatur posisi awal garis di tepi kiri link */
+    transition: width 0.3s ease; /* Efek transisi untuk lebar garis */
+  }
+  
+  .navbar-links a:hover::after,
+  .navbar-links a:focus::after,
+  .navbar-links a:active::after {
+    width: 100%; /* Mengubah lebar garis menjadi 100% saat dihover atau aktif */
+  }
+  
+  .login-btn a {
+    padding: 10px 20px;
+    background-color: #5b32d3; /* Warna latar belakang tombol login */
+    color: #ffffff; /* Warna teks tombol login */
+    text-decoration: none;
+    border-radius: 8px; /* Radius sudut 5px */
+    /* border: 2px solid #ffffff; Tambahkan border agar tombol terlihat */
+    transition: all 0.3s ease; /* Efek transisi agar smooth saat dihover */
+  }
+  
+  .login-btn a:hover {
+    background-color: #8353F8; /* Ganti warna latar belakang saat dihover */
+    color: #ffffff; /* Ganti warna teks saat dihover */
+  }
+
+  
+  .jumbotron {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dua kolom, masing-masing 1 fraksi */
+    background: linear-gradient(to bottom, #21007c 0%,#ffffff 100%);
+    color: #fff;
+    padding: 50px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Menyusun teks secara vertikal */
+  }
+  
+  .text {
+    text-align: left;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-item img {
+    max-width: 100%;
+    height: auto;
+    width: 100%; /* Mengatur lebar gambar agar responsif */
+    max-height: 200px; /* Maksimum tinggi gambar */
+    margin-left: 0; /* Menghapus margin kiri */
+  }
+
+  
+  .get-started-btn {
+    margin-top: 5px; /* Menambahkan jarak antara teks dan tombol */
+    padding: 10px 20px;
+    background-color: #5b32d3;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #8353F8;
+    color: #ffffff;
+  }
+
+  .comments-container {
+  display: flex;
+  padding-left: 100px;
+  overflow-x: auto; /* Menambahkan scroll horizontal */
+  max-width: 100%; /* Memastikan container memenuhi lebar layar */
+  margin-top: -10px;  /* Menambahkan jarak antara card */
+
+}
+
+.comments-container::-webkit-scrollbar {
+  display: none; /* Menyembunyikan scrollbar */
+}
+
+.comment {
+  flex: 0 0 auto; /* Membuat card memiliki lebar yang sama */
+  margin-right: 10px; /* Jarak antara setiap card */
+  padding: 20px;
+  margin-bottom: 50px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.star {
+  color: #FFD700;
+}
+  
+.reasons {
+  text-align: left;
+  padding: 50px;
+  padding-left: 100px;
+  margin-top: -20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  transition: box-shadow 0.5s ease;
+}
+
+.card:hover {
+  border: 2px dashed #5b32d3; /* Mengubah border menjadi garis putus-putus saat hover */
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.event-container {
+  padding: 50px 100px;
+  background-color: #ffffff;
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.event-header h2 {
+  margin: 0;
+}
+
+.event-button {
+  padding: 10px 20px;
+  color: #5b32d3;
+  text-decoration: none;
+  
+}
+
+.event-cards {
+  display: flex;
+  gap: 20px;
+  overflow-y: auto;
+  scrollbar-width: none;  
+}
+
+
+
+.event-card {
+  flex: 0 0 auto;
+  position: relative;
+  margin-right: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-date {
+  margin: 130px;
+  margin-left: -10px;
+  text-align: left;
+  position: absolute; /* Mengatur posisi absolut */
+  top: 20px; /* Menentukan posisi dari atas */
+  left: 20px; /* Menentukan posisi dari kiri */
+  background-color: #ffffff; /* Warna latar belakang kotak */
+  color: rgb(0, 0, 0); /* Warna teks */
+  padding: 10px 10px; /* Padding di dalam kotak */
+  border-radius: 5px 5px 5px 5px;
+  font-weight: 500;
+  font-size: 12px; /* Ukuran teks */
+  z-index: 1; /* Menentukan urutan tumpukan agar di atas gambar */
+}
+
+.event-card img {
+  max-width: 100%;
+    height: auto;
+    width: 100%; /* Mengatur lebar gambar agar responsif */
+    max-height: 200px; /* Maksimum tinggi gambar */
+    margin-left: 0; /* Menghapus margin kiri */
+    object-fit: cover;
+    display: block;
+}
+
+.replay-button {
+  margin-bottom: 8px;
+  background-color: rgb(241, 194, 92); /* Warna latar belakang transparan */
+  color: white; /* Warna teks */
+  padding: 8px 16px; /* Padding tombol */
+  border: none; /* Tanpa border */
+  border-radius: 4px; /* Sudut border */
+  cursor: pointer; /* Kursor berubah saat diarahkan ke tombol */  
+  top: 10px; /* Jarak dari atas */
+  left: 10px; /* Jarak dari kiri */
+}
+
+.event-details {
+  padding: 20px;
+}
+
+.event-title {
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+.description {
+  margin-top: -20px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.stars {
+  margin-right: 10px;
+}
+
+.stars-text {
+  font-size: 16px;
+  margin: 0;
+  margin-right: 10px; /* Jarak antara logo bintang dan teks "Stars 5 (1) . 63 Watch" */
+}
+
+.description p {
+  margin: 15px;
+  font-size: 16px;
+}
+
+.description del {
+  color: rgb(0, 0, 0);
+}
+
+.bayarsuka {
+  color: rgb(4, 194, 89);
+  font-weight: 600;
+}
+
+.event-miss{
+  margin: 130px;
+  margin-left: -10px;
+  text-align: left;
+  position: absolute; /* Mengatur posisi absolut */
+  top: 20px; /* Menentukan posisi dari atas */
+  left: 20px; /* Menentukan posisi dari kiri */
+  background-color: #eb5757; /* Warna latar belakang kotak */
+  color: rgb(255, 255, 255); /* Warna teks */
+  padding: 10px 10px; /* Padding di dalam kotak */
+  border-radius: 5px 5px 5px 5px;
+  font-weight: 500;
+  font-size: 12px; /* Ukuran teks */
+  z-index: 1; /* Menentukan urutan tumpukan agar di atas gambar */
+}
+
+.task-online{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.event-title-online{
+  font-weight: normal;
+  margin-top: -15px;
+}
+
+.kategori{
+  margin-bottom: 25px;
+  background-color: #a381fb; /* Warna latar belakang transparan */
+  color: white; /* Warna teks */
+  padding: 8px 16px; /* Padding tombol */
+  border: none; /* Tanpa border */
+  border-radius: 4px; /* Sudut border */
+  cursor: pointer; /* Kursor berubah saat diarahkan ke tombol */  
+  top: 10px; /* Jarak dari atas */
+  left: 10px; /* Jarak dari kiri */
+}
+
+.additional-info {
+  display: flex; /* Menjadikan elemen child flex container */
+  margin-top: 5px;
+  align-items: left; /* Menyusun elemen secara vertikal di tengah */
+}
+
+.videos-info {
+  margin-top: 4px;
+  font-weight: 300;
+  margin-left: 10px; /* Jarak antara "14 Videos" dan button */
+}
+
+.additional-info img {
+  margin-top: 5px;
+  width: 20px; /* Atur lebar logo */
+  height: 20px; /* Atur tinggi logo */
+  margin-left: 20PX;
+}
+
+.event-card:hover {
+  transform: translateY(-5px); /* Menggeser kartu ke atas saat dihover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Menambah bayangan saat dihover */
+}
+
+.event-title-blog{
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+.description-blog{
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: small;
+
+}
+
+
+.card-contact {
+  background-color: #21007c;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Lebar kartu */
+  margin: 100px auto; /* Tengah secara horizontal */
+  align-items: center; /* Menyelaraskan vertikal */
+}
+
+.content-contact {
+  margin-top: -1em; /* 1em sama dengan tinggi font saat ini */
+  margin-left: 2%; /* 2% dari lebar kartu */
+  color: #fff;
+  flex: 1;
+  padding: 20px;
+  text-align: left; /* Rata kiri */
+}
+
+.content h2 {
+  margin-top: 0;
+}
+
+.image {
+  flex: 1;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5b32d3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.btn-contact:hover {
+  background-color: #8353F8;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .card-contact {
+    flex-direction: column; /* Menetapkan arah flex menjadi vertikal */
+    align-items: flex-start; /* Menyelaraskan ke kiri */
+  }
+
+  .content-contact,
+  .image {
+    width: 100%; /* Memastikan konten penuh lebar di perangkat seluler */
+    text-align: center; /* Rata tengah pada perangkat seluler */
+    margin: 20px 0; /* Menambahkan ruang antara konten di perangkat seluler */
+  }
+}
+
+
+
+
+  
+  
